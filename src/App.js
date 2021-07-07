@@ -1,4 +1,5 @@
 import './App.scss'
+import Login from './components/Login/Login'
 import Menu from './components/Menu/Menu'
 import Chat from './components/Chat/Chat'
 import { useState } from 'react'
@@ -31,8 +32,10 @@ export default function App() {
 
   return (
     <div className='app'>
-      <Menu activeChats={activeChats} />
-      <Chat />
+      <Login />
+
+      {/* <Menu activeChats={activeChats} />
+      <Chat /> */}
     </div>
   )
 }
