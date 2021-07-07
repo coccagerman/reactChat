@@ -1,5 +1,13 @@
+import ChatHeader from './ChatHeader/ChatHeader'
+import Message from './Message/Message'
+import Input from './Input/Input'
+
 export default function Chat () {
     return (
-        <h1>Chat</h1>
+        <section className='chat'>
+            <ChatHeader />
+            <Message />
+            <Input />
+        </section>
     )
 } 

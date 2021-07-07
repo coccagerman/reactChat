@@ -1,5 +1,7 @@
 export default function Message () {
     return (
-        <h1>Message</h1>
+        <article className='message'>
+            <h1>Message</h1>
+        </article>
     )
 } 

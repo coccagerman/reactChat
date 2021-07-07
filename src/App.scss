@@ -7,4 +7,14 @@
   font-family: 'Montserrat', sans-serif;
 }
 
-@import './components/Menu/MenuHeader/menuHeader.scss;
+.app {
+  display: flex;
+}
+
+@import './components/Menu/menu.scss';
+@import './components/Menu/MenuHeader/menuHeader.scss';
+@import './components/Menu/ChatPreview/chatPreview.scss';
+@import './components/Chat/chat.scss';
+@import './components/Chat/ChatHeader/chatHeader.scss';
+@import './components/Chat/Message/message.scss';
+@import './components/Chat/Input/input.scss';

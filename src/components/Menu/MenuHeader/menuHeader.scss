@@ -1,3 +1,18 @@
 .menuHeader {
+    height: 8rem;
     background: linear-gradient(160deg, rgba(190,0,0,1) 50%, rgba(255,0,0,1) 100%);
+    color: white;
+    display: flex;
+    align-items: center;
+    
+
+    img {
+        width: 5rem;
+        margin-left: 2rem;
+    }
+
+    h1 {
+        margin-left: 1rem;
+        font-size: 2rem;
+    }
 }

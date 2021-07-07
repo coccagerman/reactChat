@@ -1,5 +1,8 @@
 export default function Input () {
     return (
-        <h1>Input</h1>
+        <form className='input'>
+            <input placeholder="Type your message..." />
+            <button>SEND</button>
+        </form>
     )
 } 

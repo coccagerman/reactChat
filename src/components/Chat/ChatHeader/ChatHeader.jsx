@@ -1,6 +1,13 @@
+import Image from '../../../assets/avatar-1.png'
 
 export default function ChatHeader () {
     return (
-        <h1>ChatHeader</h1>
+        <header className='chatHeader'>
+            <img src={Image} alt='Avatar' />
+            <div className='personDetails'>
+                <h1>Micaela Alvarez</h1>
+                <p>Marketing manager</p>
+            </div>
+        </header>
     )
 } 

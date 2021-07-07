@@ -1,0 +1,33 @@
+.chatPreview {
+    display: flex;
+    align-items: center;
+    padding: 1.5rem 0;
+    border: #6d6d6e solid;
+    border-width: 1.5px 0;
+    cursor: pointer;
+    transition: .3s;
+    &:hover {
+        background-color: #3c3d3f;
+    }
+
+    img {
+        width: 4rem;
+        border-radius: 50%;
+        margin-left: 2rem;
+    }
+
+    .previewDetails {
+        margin-left: 1rem;
+        max-width: 60%;
+
+        h3 {
+            color: white;
+        }
+
+        p {
+            color: #909090;
+            font-size: .9rem;
+            margin-top: .5rem;
+        }
+    }
+}
