@@ -3,10 +3,13 @@ import Message from './Message/Message'
 import Input from './Input/Input'
 
 export default function Chat () {
+
     return (
         <section className='chat'>
             <ChatHeader />
-            <Message />
+            <div className='conversation-container'>
+                <Message />
+            </div>
             <Input />
         </section>
     )

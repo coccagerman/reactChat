@@ -18,8 +18,24 @@
     }
 
     button {
+        color: rgba(255,0,0,1);
+        font-size: 1.25rem;
+        width: 17rem;
+        padding: .5rem;
+        margin: .5rem 0;
+        border: none;
+        border-radius: .5rem;
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        transition: .3s;
+        &:hover {
+            background-color: #bbbabb;
+        }
+
         .icon {
-            color: rgba(255,0,0,1);
+            font-size: 1.5rem;
+            margin-right: .5rem;
         }
     }
 }

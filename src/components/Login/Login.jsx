@@ -7,7 +7,7 @@ export  default function Login() {
     return (
         <section className='login'>
             <img src={logo} alt='Logo' />
-            <p>Please login</p>
+            <p>Please sign in</p>
 
             <button><Icon icon={googleFill} className='icon'/>Sign in with Google</button>
             <button><Icon icon={facebookFill} className='icon'/>Sign in with Facebook</button>

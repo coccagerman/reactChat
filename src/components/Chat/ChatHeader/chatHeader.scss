@@ -28,3 +28,26 @@
         }
     }
 }
+
+@media screen and (max-width: 950px) {
+    .chatHeader {
+        height: 6rem;
+
+        img {
+            width: 4rem;
+            margin-left: 1rem;
+        }
+
+        .personDetails {
+            margin-left: 1.25rem;
+    
+            h1 {
+                font-size: 1.2rem;
+            }
+    
+            p {
+                font-size: .75rem;
+            }
+        }
+    }
+}

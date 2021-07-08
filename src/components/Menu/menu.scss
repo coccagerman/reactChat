@@ -27,3 +27,25 @@
         }
     }
 }
+
+@media screen and (max-width: 950px) {
+    .menu {
+        width: 25%;
+        transition: .5s;
+
+        button {
+            font-size: 1rem;
+            span {
+                font-size: 1.5rem;
+                margin-right: .25rem;
+            }
+        }
+    }
+
+    .menuActive {
+        position: absolute;
+        width: 100%;
+        transition: .5s;
+        z-index: 1;
+    }
+}

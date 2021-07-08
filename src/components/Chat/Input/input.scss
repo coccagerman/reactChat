@@ -6,7 +6,7 @@
     width: 100%;
     height: 6rem;
     background-color: white;
-    
+
     input {
         height: 4rem;
         width: 55%;
@@ -30,6 +30,27 @@
         &:hover {
             background-color: #8c8c8c;
             color: white;
+        }
+    }
+}
+
+@media screen and (max-width: 950px) {
+    .input {
+        height: 4rem;
+
+        input {
+            height: 3rem;
+            width: 55%;
+            margin-left: .5rem;
+            padding: .25rem;
+            font-size: .9rem;
+        }
+
+        button {
+            font-size: 1rem;
+            padding: .5rem;
+            height: 100%;
+            margin-left: 0;
         }
     }
 }
