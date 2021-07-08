@@ -27,66 +27,6 @@ export default function App() {
       name: 'Manuel Hoffman',
       role: 'Business Manager',
       avatar: avatar3
-    },
-    {
-      id: 2,
-      name: 'Micaela Alvarez',
-      role: 'Marketing Manager',
-      avatar: avatar2
-    },
-    {
-      id: 3,
-      name: 'Manuel Hoffman',
-      role: 'Business Manager',
-      avatar: avatar3
-    },
-    {
-      id: 2,
-      name: 'Micaela Alvarez',
-      role: 'Marketing Manager',
-      avatar: avatar2
-    },
-    {
-      id: 3,
-      name: 'Manuel Hoffman',
-      role: 'Business Manager',
-      avatar: avatar3
-    },
-    {
-      id: 2,
-      name: 'Micaela Alvarez',
-      role: 'Marketing Manager',
-      avatar: avatar2
-    },
-    {
-      id: 3,
-      name: 'Manuel Hoffman',
-      role: 'Business Manager',
-      avatar: avatar3
-    },
-    {
-      id: 2,
-      name: 'Micaela Alvarez',
-      role: 'Marketing Manager',
-      avatar: avatar2
-    },
-    {
-      id: 3,
-      name: 'Manuel Hoffman',
-      role: 'Business Manager',
-      avatar: avatar3
-    },
-    {
-      id: 2,
-      name: 'Micaela Alvarez',
-      role: 'Marketing Manager',
-      avatar: avatar2
-    },
-    {
-      id: 3,
-      name: 'Manuel Hoffman',
-      role: 'Business Manager',
-      avatar: avatar3
     }
   ])
 
