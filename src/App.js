@@ -1,41 +1,29 @@
 import './App.scss'
-import Login from './components/Login/Login'
-import Menu from './components/Menu/Menu'
-import Chat from './components/Chat/Chat'
-import { useState } from 'react'
-import avatar1 from './assets/avatar-1.png'
-import avatar2 from './assets/avatar-2.png'
-import avatar3 from './assets/avatar-3.png'
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
+import { useAuthState } from 'react-firebase-hooks/auth'
+import {auth} from './services/Firebase'
+import ContextProvider from './context/ContextProvider'
+import SignIn from './components/SignIn/SignIn'
+import Main from './components/Main/Main'
+import CreateNewChat from './components/CreateNewChat/CreateNewChat'
 
 export default function App() {
 
-  const [activeChats, setActiveChats] = useState([
-    {
-      id: 1,
-      name: 'Luciana Gutierrez',
-      role: 'HR Manager',
-      avatar: avatar1
-    },
-    {
-      id: 2,
-      name: 'Micaela Alvarez',
-      role: 'Marketing Manager',
-      avatar: avatar2
-    },
-    {
-      id: 3,
-      name: 'Manuel Hoffman',
-      role: 'Business Manager',
-      avatar: avatar3
-    }
-  ])
+  const [user] = useAuthState(auth)
 
   return (
-    <div className='app'>
-      {/* <Login /> */}
 
-      <Menu activeChats={activeChats} />
-      <Chat />
-    </div>
+    <Router>
+      <ContextProvider>
+        <Switch>
+          <Route path='/' exact>
+            {user ? <Main /> : <SignIn />}
+          </Route>
+          <Route path='/createNewChat'>
+            <CreateNewChat />
+          </Route>
+        </Switch>
+      </ContextProvider>
+    </Router>
   )
 }

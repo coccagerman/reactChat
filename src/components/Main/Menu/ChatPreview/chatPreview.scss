@@ -19,17 +19,35 @@
 
     .previewDetails {
         margin-left: 1rem;
-        max-width: 60%;
-
-        h3 {
-            color: white;
-        }
+        width: 100%;
+        position: relative;
 
         p {
             color: #909090;
+        }
+
+        .nameAndDate {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            h3 {
+                color: white;
+            }
+
+            .msg-date {
+                font-size: .75rem;
+                margin-right: .5rem;
+            }
+        }
+        
+        .msg-content {
             font-size: .9rem;
             margin-top: .5rem;
+            max-width: 70%;
         }
+
+
     }
 }
 

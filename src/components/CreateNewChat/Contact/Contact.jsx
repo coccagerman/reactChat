@@ -1,8 +1,12 @@
 
-export default function Contact() {
+export default function Contact({contact}) {
     return (
         <article className='contact'>
-            <h1>Contact</h1>
+            <img src={contact.avatar} alt='Avatar' />
+            <div className='nameAndRole-container'>
+                <h3>{contact.name}</h3>
+                <p>{contact.role}</p>
+            </div>
         </article>
     )
 }

@@ -7,19 +7,19 @@
   font-family: 'Montserrat', sans-serif;
 }
 
-.app {
-  display: flex;
+a {
+  text-decoration: none
 }
 
-@import './components/Login//login.scss';
-@import './components/Menu/menu.scss';
-@import './components/Menu/MenuHeader/menuHeader.scss';
-@import './components/Menu/ChatPreview/chatPreview.scss';
-@import './components/Chat/chat.scss';
-@import './components/Chat/ChatHeader/chatHeader.scss';
-@import './components/Chat/Message/message.scss';
-@import './components/Chat/Input/input.scss';
+@import './components/SignIn/signIn.scss';
+@import './components/Main/Main.scss';
+@import './components/Main/Menu/menu.scss';
+@import './components/Main/Menu/MenuHeader/menuHeader.scss';
+@import './components/Main/Menu/ChatPreview/chatPreview.scss';
+@import './components/Main/Chat/chat.scss';
+@import './components/Main/Chat/ChatHeader/chatHeader.scss';
+@import './components/Main/Chat/Message/message.scss';
+@import './components/Main/Chat/Input/input.scss';
 @import './components/CreateNewChat/createNewChat.scss';
-@import './components/CreateNewChat/SearchBar/searchBar.scss';
+@import './components/CreateNewChat/Header/header.scss';
 @import './components/CreateNewChat/Contact/contact.scss';
-
