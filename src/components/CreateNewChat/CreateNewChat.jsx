@@ -1,16 +1,20 @@
-import { useContext } from 'react'
+import { useContext, useState } from 'react'
 import Context from '../../context/Context'
 import Header from './Header/Header'
 import ContactsContainer from './ContactsContainer/ContactsContainer'
 
 export default function CreateNewChat() {
 
-    const { activeChats } = useContext(Context)
+    const { fetchedContactsList, setFetchedContactsList } = useContext(Context)
+
+    const [searchParams, setSearchParams] = useState(null)
+
+    const filteredContactsList = fetchedContactsList.filter(contact => ((contact.name.first + ' ' + contact.name.last).toLowerCase().includes(searchParams)))
 
     return (
         <section className='createNewChat'>
-            <Header />
-            <ContactsContainer />
+            <Header setSearchParams={setSearchParams} />
+            <ContactsContainer fetchedContactsList={fetchedContactsList} setFetchedContactsList={setFetchedContactsList} searchParams={searchParams} filteredContactsList={filteredContactsList} />
         </section>
     )
 }

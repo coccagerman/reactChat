@@ -15,9 +15,6 @@ export default function Chat () {
     return (
         <section className='chat'>
             <ChatHeader currentChat={currentChat} />
-
-            <button onClick={()=>console.log(currentChat)}>test</button>
-
             <div className='conversation-container'>
                 {currentChat.messages && currentChat.messages.map(msg => <Message msg={msg} currentChat={currentChat} />)}
                 <span ref={fixedScroll}></span>

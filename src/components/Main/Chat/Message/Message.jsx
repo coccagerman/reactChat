@@ -3,8 +3,7 @@ import { auth } from '../../../../services/Firebase'
 export default function Message ({msg, currentChat}) {
     
     const { photoURL } = auth.currentUser
-
-
+    
     return (
         <>
             <article className={`message ${msg.received ? 'received' : 'sent'}`}>

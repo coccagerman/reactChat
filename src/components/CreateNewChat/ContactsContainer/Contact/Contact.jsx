@@ -1,11 +1,10 @@
 import { useContext } from 'react'
 import Context from '../../../../context/Context'
-import { Link, useHistory } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
 export default function Contact({contact}) {
 
     const { activeChats, setActiveChats, setCurrentChat } = useContext(Context)
-    let history = useHistory()
 
     const chatToAdd = {
         avatar: contact.picture.medium,

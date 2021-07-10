@@ -4,15 +4,16 @@ import logo from '../../../assets/PSh Logo_WHITE.svg'
 import arrowRight from '@iconify-icons/akar-icons/arrow-right'
 import { Link } from 'react-router-dom'
 
-export default function Header() {
+export default function Header({setSearchParams}) {
     return (
         <header className='header-newChat'>
             <div className='logoAndArrow-container'>
                 <Link to='/'><Icon icon={arrowRight} hFlip={true} className='arrow-icon'/></Link>
                 <img src={logo} alt='Logo' />
             </div>
+
             <form className='searchBar-Container'>
-                <input type='text' className='textBox' placeholder='Search by name...' />
+                <input type='text' className='textBox' placeholder='Search by name...' onChange={e => setSearchParams(e.target.value.toLowerCase())}/>
                 <Icon icon={bxSearch} className='search-icon' />
             </form>
         </header>

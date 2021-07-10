@@ -1,10 +1,7 @@
-import { useEffect, useContext } from 'react'
-import Context from '../../../context/Context'
+import { useEffect } from 'react'
 import Contact from './Contact/Contact'
 
-export default function ContactsContainer() {
-
-    const { fetchedContactsList, setFetchedContactsList } = useContext(Context)
+export default function ContactsContainer({fetchedContactsList, setFetchedContactsList, filteredContactsList, searchParams }) {
 
     const fetchContactsList = async () => {
         if (fetchedContactsList.length === 0) {
@@ -14,17 +11,16 @@ export default function ContactsContainer() {
             const res = await fetch(url)
             const data = await res.json()
             results.push(...data.results)
-     
+
             setFetchedContactsList(results)
         }
     }
 
-    useEffect(() => fetchContactsList(), [])
+    useEffect(()=> fetchContactsList(),[]) 
 
     return (
         <div className='contacts-container'>
-        {fetchedContactsList ? fetchedContactsList.map(contact => <Contact contact={contact} key={contact.id.value} />) : 'Loading...'}
-        {/* {activeChats ? activeChats.map(contact => <Contact contact={contact} key={contact.id} />) : 'Loading...'} */}
-    </div>
+            {(searchParams ? filteredContactsList : fetchedContactsList).map(contact => <Contact contact={contact} key={contact.id.value} />)}
+        </div>
     )
 }
