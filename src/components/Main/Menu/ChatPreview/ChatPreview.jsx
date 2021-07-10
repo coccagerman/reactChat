@@ -9,9 +9,9 @@ export default function ChatPreview ({chat, hidenMenu, activePreview, setActiveP
                 <div className='previewDetails'>
                     <div className='nameAndDate'>
                         <h3>{chat.name}</h3>
-                        <p className='msg-date'>{chat.messages[chat.messages.length-1].date}</p>
+                        <p className='msg-date'>{chat.messages.length !== 0 ? chat.messages[chat.messages.length-1].date : null}</p>
                     </div>
-                    <p className='msg-content'>{shortenText(chat.messages[chat.messages.length-1].content)}</p>
+                    <p className='msg-content'>{chat.messages.length !== 0 ? shortenText(chat.messages[chat.messages.length-1].content) : null}</p>
                 </div>
             }
         </article>

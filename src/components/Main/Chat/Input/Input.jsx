@@ -24,7 +24,7 @@ export default function Input ({fixedScroll, currentChat}) {
                   messages: [...activeChat.messages, ...newMsg]
                 }
               }
-              return activeChat;
+              return activeChat
             })
         )
 

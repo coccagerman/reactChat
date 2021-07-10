@@ -72,9 +72,13 @@ export default function ContextProvider ({children}) {
           ]
         }
       ])
+    
+    const [currentChat, setCurrentChat] = useState(activeChats[1])
+
+    const [fetchedContactsList, setFetchedContactsList] = useState([])
 
     return (
-        <Context.Provider value={{ activeChats, setActiveChats }} >
+        <Context.Provider value={{ activeChats, setActiveChats, fetchedContactsList, setFetchedContactsList, currentChat, setCurrentChat }} >
             {children}
         </Context.Provider>
     )

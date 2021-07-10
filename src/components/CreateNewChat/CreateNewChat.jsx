@@ -1,7 +1,7 @@
 import { useContext } from 'react'
 import Context from '../../context/Context'
 import Header from './Header/Header'
-import Contact from './Contact/Contact'
+import ContactsContainer from './ContactsContainer/ContactsContainer'
 
 export default function CreateNewChat() {
 
@@ -10,9 +10,14 @@ export default function CreateNewChat() {
     return (
         <section className='createNewChat'>
             <Header />
-            <div className='chatPreview-container'>
-                {activeChats.map(contact => <Contact contact={contact} key={contact.id} />)}
-            </div>
+            <ContactsContainer />
         </section>
     )
 }
+
+// Temitas para arreglar:
+// Al hacer click en el contacto se debe agregar el nuevo chat y mostrarlo como activo.
+// Si el chat con ese contacto ya estaba creado, solo se debe redirigir y mostrar como activo.
+// Combinar los contactos fetcheados con los predefinidos para que se muestren todos juntos.
+// Ordenar la lista de contactos alfabéticamente.
+// Configurar searchBar.

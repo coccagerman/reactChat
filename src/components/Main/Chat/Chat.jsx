@@ -1,9 +1,12 @@
+import { useEffect, useRef, useContext } from 'react'
+import Context from '../../../context/Context'
 import ChatHeader from './ChatHeader/ChatHeader'
 import Message from './Message/Message'
 import Input from './Input/Input'
-import { useEffect, useRef } from 'react'
 
-export default function Chat ({currentChat}) {
+export default function Chat () {
+
+    const { currentChat } = useContext(Context)
 
     const fixedScroll = useRef()
 
@@ -12,6 +15,9 @@ export default function Chat ({currentChat}) {
     return (
         <section className='chat'>
             <ChatHeader currentChat={currentChat} />
+
+            <button onClick={()=>console.log(currentChat)}>test</button>
+
             <div className='conversation-container'>
                 {currentChat.messages && currentChat.messages.map(msg => <Message msg={msg} currentChat={currentChat} />)}
                 <span ref={fixedScroll}></span>

@@ -5,14 +5,13 @@ import { useWindowSize } from '../../../customHooks/useWindowSize'
 import MenuHeader from './MenuHeader/MenuHeader'
 import ChatPreview from './ChatPreview/ChatPreview'
 
-export default function Menu ({setCurrentChat}) {
+export default function Menu () {
 
-    const { activeChats } = useContext(Context)
+    const { activeChats, setCurrentChat } = useContext(Context)
+
     const windowSize = useWindowSize()
-
     const [hidenMenu, setHidenMenu] = useState(false)
 
-    // Estado utilizado para mostrar el preview que esté activo según qué chat se esté mostrando en el momento
     const [activePreview, setActivePreview] = useState(activeChats[1])
 
     return (
