@@ -1,21 +1,41 @@
-import { useState } from 'react'
+import Context from '../../../../context/Context'
+import { useState, useContext } from 'react'
 
 export default function Input ({fixedScroll, currentChat}) {
+
+    const { activeChats, setActiveChats } = useContext(Context)
 
     const [formValue, setFormValue] = useState('')
 
     const sendMessage = (e) => {
         e.preventDefault()
+        
+        const newMsg = [{
+            content: formValue,
+            date: new Date().toLocaleString('en-US', { hour: 'numeric', minute: 'numeric', hour12: true }),
+            received: false
+        }]
+
+        setActiveChats(
+            activeChats.map((activeChat) => {
+              if (activeChat.id === currentChat.id) {
+                return {
+                  ...activeChat,
+                  messages: [...activeChat.messages, ...newMsg]
+                }
+              }
+              return activeChat;
+            })
+        )
 
         currentChat.messages.push({
             content: formValue,
-            date: "9:45 AM",
+            date: new Date().toLocaleString('en-US', { hour: 'numeric', minute: 'numeric', hour12: true }),
             received: false
         })
 
         setFormValue('')
-        fixedScroll.current.scrollIntoView({behavior: 'smooth'})
-        console.log(currentChat)
+        setTimeout(() => fixedScroll.current.scrollIntoView({behavior: 'smooth'}), .1)
     }
 
     return (
