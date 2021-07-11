@@ -1,14 +1,14 @@
 import Context from '../../../../context/Context'
 import { useContext } from 'react'
 
-export default function ChatPreview ({chat, hidenMenu, windowSize}) {
+export default function ChatPreview ({chat, hidenMenu, windowSize, setHidenMenu}) {
 
     const shortenText = (text) => text.length > 50 ? text.slice(0, 50 - 1) + '…' : text
 
     const { currentChat, setCurrentChat } = useContext(Context)
 
     return (
-        <article className={`chatPreview ${currentChat.id === chat.id ? 'active' : null}`} onClick={() => setCurrentChat(chat)}> 
+        <article className={`chatPreview ${currentChat.id === chat.id ? 'active' : null}`} onClick={() => {setCurrentChat(chat); setHidenMenu(true)}}> 
             <img src={chat.avatar} alt='Avatar' />
             {(hidenMenu && windowSize < 950) ? null :
                 <div className='previewDetails'>

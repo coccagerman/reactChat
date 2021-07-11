@@ -16,17 +16,20 @@ export default function ContextProvider ({children}) {
             {
               content: 'Hola Luciana! Tuviste alguna novedad?',
               received: false,
-              date: '9:45 AM'
+              date: '9:45 AM',
+              msgId: 1
             },
             {
               content: 'Hola John! Todavía no...',
               received: true,
-              date: '10:19 AM'
+              date: '10:19 AM',
+              msgId: 2
             },
             {
               content: 'Si tengo alguna otra novedad te comento. Gracias!',
               received: true,
-              date: '10:20 AM'
+              date: '10:20 AM',
+              msgId: 3
             }
           ]
         },
@@ -39,17 +42,20 @@ export default function ContextProvider ({children}) {
             {
               content: 'Hola John! Entre qué horarios podrías hoy tener la meeting?',
               received: true,
-              date: '9:45 AM'
+              date: '9:45 AM',
+              msgId: 1
             },
             {
               content: 'Hola Micaela! Muy bien. Yo puedo de 10 a 17 hs.',
               received: false,
-              date: '10:05 AM'
+              date: '10:05 AM',
+              msgId: 2
             },
             {
               content: 'Dale, agendé la meeting para hoy a las 14hs.',
               received: true,
-              date: '10:15 AM'
+              date: '10:15 AM',
+              msgId: 3
             }
           ]
         },
@@ -62,12 +68,14 @@ export default function ContextProvider ({children}) {
             {
               content: 'Gracias por la reunión de ayer, Manu, fue muy productiva!',
               received: false,
-              date: '9:35 AM'
+              date: '9:35 AM',
+              msgId: 1
             },
             {
               content: 'Gracias a vos!',
               received: true,
-              date: '9:37 AM'
+              date: '9:37 AM',
+              msgId: 2
             }
           ]
         }

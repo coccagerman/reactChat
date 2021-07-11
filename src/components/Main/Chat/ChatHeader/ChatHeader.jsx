@@ -1,4 +1,10 @@
-export default function ChatHeader ({currentChat}) {
+import Context from '../../../../context/Context'
+import { useContext } from 'react'
+
+export default function ChatHeader () {
+    
+    const { currentChat } = useContext(Context)
+
     return (
         <header className='chatHeader'>
             <img src={currentChat.avatar} alt='Avatar' />

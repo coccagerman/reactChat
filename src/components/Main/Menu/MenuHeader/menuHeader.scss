@@ -32,13 +32,18 @@
         height: 6rem;
         justify-content: space-around;
         padding: 0 2rem;
+
         img {
             width: 2rem;
             margin-left: 0;
         }
 
-        .icon {
-            margin: 0 auto;
+        .iconMenuOpen {
+            position: absolute;
+        }
+
+        .signOut {
+            margin-right: 0;
         }
     }
 }
