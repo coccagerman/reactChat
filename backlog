@@ -1,0 +1,7 @@
+// Temitas para arreglar:
+// Al hacer click en el contacto se debe agregar el nuevo chat y mostrarlo como activo.
+// Si el chat con ese contacto ya estaba creado, solo se debe redirigir y mostrar como activo.
+// Combinar los contactos fetcheados con los predefinidos para que se muestren todos juntos.
+// Agregar opción de eliminar chats.
+// Configurar sign out.
+// Configurar menú mobile.

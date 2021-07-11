@@ -27,12 +27,13 @@ export default function Input ({fixedScroll, currentChat}) {
               return activeChat
             })
         )
-
+        ///////////        ///////////        ///////////        ///////////        ///////////        ///////////
         currentChat.messages.push({
             content: formValue,
             date: new Date().toLocaleString('en-US', { hour: 'numeric', minute: 'numeric', hour12: true }),
             received: false
         })
+        ///////////        ///////////        ///////////        ///////////        ///////////        ///////////
 
         setFormValue('')
         setTimeout(() => fixedScroll.current.scrollIntoView({behavior: 'smooth'}), .1)
@@ -41,7 +42,7 @@ export default function Input ({fixedScroll, currentChat}) {
     return (
         <form className='input'>
             <input value={formValue} onChange={e => setFormValue(e.target.value)} placeholder="Type your message..." />
-            <button onClick={(e) => sendMessage(e)}>SEND</button>
+            <button onClick={e => sendMessage(e)}>SEND</button>
         </form>
     )
 } 

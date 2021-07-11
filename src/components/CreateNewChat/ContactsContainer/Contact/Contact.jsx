@@ -15,13 +15,10 @@ export default function Contact({contact}) {
     }
 
     const newChat = () => {
-
         let chatIndex
         for (let i = 0; i < activeChats.length; i++) {
-            if(chatToAdd.name === activeChats[i].name) {chatIndex = i}
+            if (chatToAdd.name === activeChats[i].name) {chatIndex = i}
         }
-
-        console.log('chatIndex' + chatIndex)
 
         if (chatIndex === undefined) {
             setActiveChats([...activeChats, chatToAdd])
@@ -29,6 +26,9 @@ export default function Contact({contact}) {
         } else {
             setCurrentChat(activeChats[chatIndex])
         }
+
+        console.log('activeChats')
+        console.log(activeChats)
     }
 
     return (

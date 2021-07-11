@@ -4,7 +4,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 100vw;
+    width: 100%;
     padding: 1rem 0;
 
     .logoAndArrow-container {
@@ -21,25 +21,6 @@
             color: white;
             margin: 0 1rem;
             cursor: pointer;
-        }
-    }
-
-    .searchBar-Container {
-        display: flex;
-        align-items: center;
-        margin-top: 1rem;
-        padding: .5rem;
-        background-color: white;
-        border-radius: .5rem;
-
-        input {
-            border: none;
-            font-size: 1.5rem;
-        }
-
-        .search-icon {
-            font-size: 2rem;
-            color: #ea0a08;
         }
     }
 }

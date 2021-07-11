@@ -1,7 +1,7 @@
 import { useEffect } from 'react'
 import Contact from './Contact/Contact'
 
-export default function ContactsContainer({fetchedContactsList, setFetchedContactsList, filteredContactsList, searchParams }) {
+export default function ContactsContainer({fetchedContactsList, setFetchedContactsList}) {
 
     const fetchContactsList = async () => {
         if (fetchedContactsList.length === 0) {
@@ -13,14 +13,20 @@ export default function ContactsContainer({fetchedContactsList, setFetchedContac
             results.push(...data.results)
 
             setFetchedContactsList(results)
+
+            fetchedContactsList.sort(function(a, b) {
+                var textA = a.DepartmentName.toUpperCase();
+                var textB = b.DepartmentName.toUpperCase();
+                return (textA < textB) ? -1 : (textA > textB) ? 1 : 0;
+            })
         }
     }
 
-    useEffect(()=> fetchContactsList(),[]) 
+    useEffect(() => fetchContactsList(), []) 
 
     return (
         <div className='contacts-container'>
-            {(searchParams ? filteredContactsList : fetchedContactsList).map(contact => <Contact contact={contact} key={contact.id.value} />)}
+            {fetchedContactsList.map(contact => <Contact contact={contact} key={contact.id.value} />)}
         </div>
     )
 }
