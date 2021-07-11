@@ -22,7 +22,7 @@ export default function ContactsContainer({fetchedContactsList, setFetchedContac
         }
     }
 
-    useEffect(() => fetchContactsList(), []) 
+    useEffect(() => fetchContactsList()) 
 
     return (
         <div className='contacts-container'>
