@@ -1,7 +1,10 @@
-import { useEffect } from 'react'
+import Context from '../../../context/Context'
+import { useEffect, useContext } from 'react'
 import Contact from './Contact/Contact'
 
-export default function ContactsContainer({fetchedContactsList, setFetchedContactsList}) {
+export default function ContactsContainer() {
+
+    const { fetchedContactsList, setFetchedContactsList } = useContext(Context)
 
     const fetchContactsList = async () => {
         if (fetchedContactsList.length === 0) {

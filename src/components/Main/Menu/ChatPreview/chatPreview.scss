@@ -47,6 +47,19 @@
             max-width: 70%;
         }
 
+        .delete-btn {
+            position: relative;
+            font-size: .85rem;
+            background-color: #CCC;
+            top: 1rem;
+            right: 1rem;
+            padding: 1rem;
+            z-index: 4;
+
+            &:hover {
+                background-color: red;
+            }
+        }
 
     }
 }
