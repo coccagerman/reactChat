@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 
 export default function Contact({contact}) {
 
-    const { activeChats, setActiveChats, setCurrentChat, currentChat } = useContext(Context)
+    const { activeChats, setActiveChats, setCurrentChat } = useContext(Context)
 
     const chatToAdd = {
         avatar: contact.picture.medium,
@@ -22,11 +22,10 @@ export default function Contact({contact}) {
 
         if (chatIndex === undefined) {
             setActiveChats([...activeChats, chatToAdd])
-            setCurrentChat(activeChats[activeChats.length-1])
+            setCurrentChat(chatToAdd)
         } else {
             setCurrentChat(activeChats[chatIndex])
         }
-
     }
 
     return (
