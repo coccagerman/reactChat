@@ -13,17 +13,17 @@ export default function App() {
 
   return (
 
-    <Router>
-      <ContextProvider>
-        <Switch>
-          <Route path='/' exact>
-            {user ? <Main /> : <SignIn />}
-          </Route>
-          <Route path='/createNewChat'>
-            <CreateNewChat />
-          </Route>
-        </Switch>
-      </ContextProvider>
-    </Router>
+    <ContextProvider>
+      <Router>
+          <Switch>
+            <Route path='/' exact>
+              {user ? <Main /> : <SignIn />}
+            </Route>
+            <Route path='/createNewChat'>
+              <CreateNewChat />
+            </Route>
+          </Switch>
+      </Router>
+    </ContextProvider>
   )
 }

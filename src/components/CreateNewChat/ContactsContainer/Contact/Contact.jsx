@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 
 export default function Contact({contact}) {
 
-    const { activeChats, setActiveChats, setCurrentChat } = useContext(Context)
+    const { activeChats, setActiveChats, setCurrentChat, currentChat } = useContext(Context)
 
     const chatToAdd = {
         avatar: contact.picture.medium,
@@ -27,15 +27,13 @@ export default function Contact({contact}) {
             setCurrentChat(activeChats[chatIndex])
         }
 
-        console.log('activeChats')
-        console.log(activeChats)
     }
 
     return (
         <Link to='/'>
             <article className='contact' onClick={() => newChat()}>
                 <img src={contact.picture.medium} alt='Avatar' />
-                <div className='nameAndRole-container'>
+                <div className='nameContainer'>
                     <h3>{contact.name.first} {contact.name.last}</h3>
                 </div>
             </article>

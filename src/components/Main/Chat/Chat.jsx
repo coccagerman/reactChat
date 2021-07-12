@@ -6,7 +6,6 @@ import Input from './Input/Input'
 export default function Chat () {
 
     const fixedScroll = useRef()
-
     useEffect(() => fixedScroll.current.scrollIntoView({behavior: 'smooth'}))
 
     return (
