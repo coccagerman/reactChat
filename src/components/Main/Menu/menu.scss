@@ -12,7 +12,7 @@
         justify-content: center;
         align-items: center;
         margin: 1.5rem auto 0 auto;
-        padding: 0 .5rem;
+        padding: 0 .5rem 2rem .5rem;
         border-radius: .35rem;
         cursor: pointer;
         transition: .3s;
@@ -39,14 +39,17 @@
 
 @media screen and (max-width: 950px) {
     .menu {
-        width: 25%;
+        height: 101vh;
+
+        width: 20%;
         transition: .5s;
 
         button {
-            font-size: 1rem;
+            padding: 0;
+            margin: 1rem auto;
             span {
-                font-size: 1.5rem;
-                margin-right: .25rem;
+                font-size: 3rem;
+                margin-right: 0;
             }
         }
     }

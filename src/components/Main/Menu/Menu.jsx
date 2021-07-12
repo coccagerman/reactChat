@@ -10,7 +10,7 @@ export default function Menu () {
     const { activeChats } = useContext(Context)
 
     const windowSize = useWindowSize()
-    const [hidenMenu, setHidenMenu] = useState(false)
+    const [hidenMenu, setHidenMenu] = useState(true)
 
     return (
         <section className={`menu ${!hidenMenu ? 'menuActive' : null}`}>
@@ -19,7 +19,7 @@ export default function Menu () {
                 {activeChats.map(chat => 
                     <ChatPreview chat={chat} key={chat.id} windowSize={windowSize} hidenMenu={hidenMenu} setHidenMenu={setHidenMenu} />
                 )}
-                <Link to='/createNewChat'><button><span>+</span> Create New</button></Link>
+                <Link to='/createNewChat'><button><span>+</span>{windowSize > 950 ? ' Create New' : null}</button></Link>
             </div>
         </section>
     )
