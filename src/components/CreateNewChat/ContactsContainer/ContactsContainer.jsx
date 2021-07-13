@@ -4,7 +4,7 @@ import Contact from './Contact/Contact'
 
 export default function ContactsContainer() {
 
-    const { fetchedContactsList, setFetchedContactsList } = useContext(Context)
+    const { fetchedContactsList, setFetchedContactsList, activeChats } = useContext(Context)
 
     const fetchContactsList = async () => {
         if (fetchedContactsList.length === 0) {
@@ -16,20 +16,22 @@ export default function ContactsContainer() {
             results.push(...data.results)
 
             setFetchedContactsList(results)
-
-            fetchedContactsList.sort(function(a, b) {
-                var textA = a.DepartmentName.toUpperCase();
-                var textB = b.DepartmentName.toUpperCase();
-                return (textA < textB) ? -1 : (textA > textB) ? 1 : 0;
-            })
         }
     }
 
-    useEffect(() => fetchContactsList()) 
+    let previousChatsArray = []
+
+    const previousChats = () => {
+        for (let i = 0; i < activeChats.length; i++) {
+            previousChatsArray.push(activeChats[i].name)
+        }
+    }
+
+    useEffect(() => fetchContactsList(), previousChats())
 
     return (
         <div className='contacts-container'>
-            {fetchedContactsList.map(contact => <Contact contact={contact} key={contact.id.value} />)}
+            {fetchedContactsList.filter(contact => previousChatsArray.indexOf(contact.name.first + ' ' + contact.name.last) === -1).map(contact => <Contact contact={contact} key={contact.id.value} />)}
         </div>
     )
 }

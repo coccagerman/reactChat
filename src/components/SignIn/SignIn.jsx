@@ -1,5 +1,5 @@
 import firebase from 'firebase/app'
-import {auth} from '../../services/Firebase'
+import { auth } from '../../services/Firebase'
 import logo from '../../assets/PSh Logo_WHITE.svg'
 import { Icon } from '@iconify/react';
 import googleFill from '@iconify-icons/akar-icons/google-fill';

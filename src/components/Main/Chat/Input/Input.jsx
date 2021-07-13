@@ -1,7 +1,7 @@
 import Context from '../../../../context/Context'
 import { useState, useContext } from 'react'
 
-export default function Input ({fixedScroll}) {
+export default function Input ({ fixedScroll }) {
 
     const { currentChat, setActiveChats, activeChats } = useContext(Context)
 

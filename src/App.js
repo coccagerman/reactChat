@@ -1,7 +1,7 @@
 import './App.scss'
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 import { useAuthState } from 'react-firebase-hooks/auth'
-import {auth} from './services/Firebase'
+import { auth } from './services/Firebase'
 import ContextProvider from './context/ContextProvider'
 import SignIn from './components/SignIn/SignIn'
 import Main from './components/Main/Main'
@@ -12,7 +12,6 @@ export default function App() {
   const [user] = useAuthState(auth)
 
   return (
-
     <ContextProvider>
       <Router>
           <Switch>

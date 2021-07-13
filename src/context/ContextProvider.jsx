@@ -4,7 +4,7 @@ import avatar1 from './../assets/avatar-1.png'
 import avatar2 from './../assets/avatar-2.png'
 import avatar3 from './../assets/avatar-3.png'
 
-export default function ContextProvider ({children}) {
+export default function ContextProvider ({ children }) {
 
     const [activeChats, setActiveChats] = useState([
         {

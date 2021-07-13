@@ -1,6 +1,6 @@
 import { auth } from '../../../../../services/Firebase'
 
-export default function Message ({msg, currentChat}) {
+export default function Message ({ msg, currentChat }) {
     
     const { photoURL } = auth.currentUser
     

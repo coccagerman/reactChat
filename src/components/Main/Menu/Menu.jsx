@@ -19,7 +19,7 @@ export default function Menu () {
                 {activeChats.map(chat => 
                     <ChatPreview chat={chat} key={chat.id} windowSize={windowSize} hidenMenu={hidenMenu} setHidenMenu={setHidenMenu} />
                 )}
-                <Link to='/createNewChat'><button><span>+</span>{windowSize > 950 ? ' Create New' : null}</button></Link>
+                <Link to='/createNewChat'><button><span>+</span>{(windowSize > 950 || !hidenMenu) ? ' Create New' : null}</button></Link>
             </div>
         </section>
     )

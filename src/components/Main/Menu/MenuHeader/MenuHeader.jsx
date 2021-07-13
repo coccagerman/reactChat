@@ -1,4 +1,4 @@
-import {auth} from './../../../../services/Firebase'
+import { auth } from './../../../../services/Firebase'
 import logo from '../../../../assets/PSh Logo_WHITE.svg'
 import { Icon } from '@iconify/react'
 import arrowRight from '@iconify-icons/akar-icons/arrow-right'

@@ -1,7 +1,7 @@
 import Context from '../../../../context/Context'
 import { useContext } from 'react'
 
-export default function ChatPreview ({chat, hidenMenu, windowSize, setHidenMenu}) {
+export default function ChatPreview ({ chat, hidenMenu, windowSize, setHidenMenu }) {
 
     const shortenText = (text) => text.length > 50 ? text.slice(0, 50 - 1) + '…' : text
 

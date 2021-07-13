@@ -2,25 +2,27 @@ import { useContext } from 'react'
 import Context from '../../../../context/Context'
 import { Link } from 'react-router-dom'
 
-export default function Contact({contact}) {
+export default function Contact({ contact }) {
 
     const { activeChats, setActiveChats, setCurrentChat } = useContext(Context)
 
-    const chatToAdd = {
-        avatar: contact.picture.medium,
-        id: activeChats[activeChats.length-1].id + 1,
-        messages: [],
-        name: contact.name.first + ' ' + contact.name.last,
-        role: null
-    }
-
     const newChat = () => {
+
+        const chatToAdd = {
+            avatar: contact.picture.medium,
+            id: activeChats[activeChats.length-1].id + 1,
+            messages: [],
+            name: contact.name.first + ' ' + contact.name.last,
+            role: null
+        }
+        
         let chatIndex
         for (let i = 0; i < activeChats.length; i++) {
             if (chatToAdd.name === activeChats[i].name) {chatIndex = i}
         }
 
         if (chatIndex === undefined) {
+            
             setActiveChats([...activeChats, chatToAdd])
             setCurrentChat(chatToAdd)
         } else {
