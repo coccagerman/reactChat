@@ -27,7 +27,7 @@ export default function ContactsContainer() {
         }
     }
 
-    useEffect(() => fetchContactsList(), previousChats())
+    useEffect(() => {fetchContactsList(); previousChats()})
 
     return (
         <div className='contacts-container'>
